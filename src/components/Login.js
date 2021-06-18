@@ -7,8 +7,8 @@ const Login = () => {
   // when you have handled the token, navigate to the BubblePage route
 
   const [credentials, setCredentials] = useState({
-    username: "Lambda",
-    password: "School",
+    username: "",
+    password: "",
   });
   const [error, setError] = useState("");
   const { push } = useHistory();

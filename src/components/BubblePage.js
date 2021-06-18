@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
 
-import { editColorService, deleteColorService } from '../services/colorServices';
-import fetchColorService from '../services/fetchColorService';
+// import { editColorService, deleteColorService } from '../services/colorServices';
+import fetchColorService from "../services/fetchColorService";
 
 const BubblePage = () => {
   const [colors, setColors] = useState([]);
@@ -14,16 +14,20 @@ const BubblePage = () => {
     setEditing(value);
   };
 
-  const saveEdit = (editColor) => {
-  };
+  const saveEdit = (editColor) => {};
 
-  const deleteColor = (colorToDelete) => {
-  };
+  const deleteColor = (colorToDelete) => {};
 
   return (
     <div className="container">
-      <ColorList colors={colors} editing={editing} toggleEdit={toggleEdit} saveEdit={saveEdit} deleteColor={deleteColor}/>
-      <Bubbles colors={colors}/>
+      <ColorList
+        colors={colors}
+        editing={editing}
+        toggleEdit={toggleEdit}
+        saveEdit={saveEdit}
+        deleteColor={deleteColor}
+      />
+      <Bubbles colors={colors} />
     </div>
   );
 };
